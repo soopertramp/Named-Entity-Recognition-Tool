@@ -5,4 +5,3 @@ spacy
 nltk
 altair
 pandas
-py-exceptions

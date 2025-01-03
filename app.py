@@ -32,7 +32,7 @@ if uploaded_file:
 
              # Summary of Entity Counts
             st.subheader("Entity Type Summary")
-            summary = df_sorted["Short Label"].value_counts().reset_index()
+            summary = df_sorted["Full Label"].value_counts().reset_index()
             summary.columns = ["Entity Type", "Count"]
             st.table(summary)
 
