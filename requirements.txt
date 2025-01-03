@@ -5,4 +5,4 @@ spacy
 nltk
 altair
 pandas
-python -m spacy download en_core_web_sm
+en_core_web_sm
