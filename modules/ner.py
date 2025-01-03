@@ -1,7 +1,13 @@
 import spacy
 
 # Load spaCy model globally to avoid reloading
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    # Download the model if it's not already installed
+    from spacy.cli import download
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
 
 # Entity Label to Full Form Mapping
 ENTITY_FULL_FORMS = {
